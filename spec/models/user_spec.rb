@@ -49,7 +49,7 @@ RSpec.describe User, type: :model do
       user.save
       saved_user = User.authenticate_with_credentials('jignajeganu@test.com', '5678')
       expected_user = User.find_by_email('jignajeganu@test.com')
-      # expect(saved_user).to be_valid
+     
       expect(saved_user).to eq(expected_user)
     end
 
